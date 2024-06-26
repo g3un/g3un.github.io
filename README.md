@@ -1,2 +1,3 @@
-# g3un.github.io
+# Blog
+
 My personal blog.
