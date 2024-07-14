@@ -1,5 +1,5 @@
 +++
-title = "G3un's Blog"
+title = "Home"
 +++
 
-# G3un's Blog
+# Home

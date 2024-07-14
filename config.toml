@@ -1,5 +1,4 @@
-# The URL the site will be built for
-base_url = "https://blog.g3un.com"
+base_url = "https://blog.g3un.com/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -9,8 +8,12 @@ build_search_index = true
 
 theme = "no-style-please"
 
-[markdown]
+taxonomies = [
+    { name = "tag" }
+]
 
+[markdown]
+permalinks_without_slash = true
 highlight_code = true
 
 [extra]
@@ -19,12 +22,14 @@ list_pages = true
 add_toc = true
 
 header_nav = [
-    { name = "home", url = "/" },
-    { name = "about", url = "/about" },
-    { name = "post", url = "/post" },
-    { name = "project", url = "/project" },
+    { name = "~home", url = "/" },
+    { name = "@about", url = "/about/" },
+    { name = ">post", url = "/post/" },
+    { name = "*project", url = "/project/" },
+    { name = "#tag", url = "/tag/" },
 ]
 
 footer_nav = [
-    { name = "github", url = "https://github.com/g3un", new_tab = true },
+    { name = "GITHUB", url = "https://github.com/g3un/" },
+    { name = "X", url = "https://x.com/g3un98/" }
 ]
