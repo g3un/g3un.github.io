@@ -1,9 +1,6 @@
 base_url = "https://blog.g3un.com/"
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
 theme = "no-style-please"
@@ -11,6 +8,8 @@ theme = "no-style-please"
 taxonomies = [
     { name = "tag" }
 ]
+
+author = "g3un"
 
 [markdown]
 permalinks_without_slash = true
