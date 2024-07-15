@@ -9,8 +9,6 @@ taxonomies = [
     { name = "tag" }
 ]
 
-author = "g3un"
-
 [markdown]
 permalinks_without_slash = true
 highlight_code = true
@@ -32,3 +30,5 @@ footer_nav = [
     { name = "GITHUB", url = "https://github.com/g3un/" },
     { name = "X", url = "https://x.com/g3un98/" }
 ]
+
+author = "g3un"
