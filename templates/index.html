@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+<p>{{ section.path }}</p>
+
+<h1>{{ section.title }}</h1>
+
+{% endblock header %}
+
+{% block content %}
+
+<h2>Recent Post</h2>
+
+{% set recent_posts = get_section(path="post/_index.md") %}
+<ul>
+    {% for post in recent_posts.pages %}
+    {% if loop.index == 6 %}{% break %}{% endif %}
+    <li>
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+        <br />
+        <small>{{ post.description }}</small>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

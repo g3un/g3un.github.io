@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+<p><a href="..">..</a>/{{ page.slug }}</p>
+
+{% if page.updated %}
+<p class="post-meta"><time datetime="{{ page.updated }}">{{ page.updated }} (*)</time></p>
+{% elif page.date %}
+<p class="post-meta"><time datetime="{{ page.date }}">{{ page.date }}</time></p>
+{% endif %}
+
+<h1>{{ page.title }}</h1>
+
+{% endblock header %}
+
+{% block content %}
+
+{% if page.toc and not page.extra.no_toc %}
+<h2>ToC</h2>
+
+<ul>
+    {% for h2 in page.toc %}
+    <li>
+        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+        {% if h2.children %}
+        <ul>
+            {% for h3 in h2.children %}
+            <li>
+                <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+                {% if h3.children %}
+                <ul>
+                    {% for h4 in h3.children %}
+                    <li>
+                        <a href="{{ h4.permalink | safe }}">{{ h4.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{{ page.content | safe }}
+
+{% endblock content %}
+
+{% block footer %}
+
+<p class="taxonomies">
+{% if page.taxonomies.tag %}
+{% for tag in page.taxonomies.tag %}
+<a href="/tag/{{ tag | slugify }}/">#{{ tag }}</a>
+{% endfor %}
+{% endif %}
+</p>
+
+{% endblock footer %}
