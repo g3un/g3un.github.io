@@ -3,4 +3,16 @@
     <url>
         <loc>https://blog.g3un.com/</loc>
     </url>
+    <url>
+        <loc>https://blog.g3un.com/about/</loc>
+    </url>
+    <url>
+        <loc>https://blog.g3un.com/post/</loc>
+    </url>
+    <url>
+        <loc>https://blog.g3un.com/project/</loc>
+    </url>
+    <url>
+        <loc>https://blog.g3un.com/tag/</loc>
+    </url>
 </urlset>
