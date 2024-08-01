@@ -10,7 +10,7 @@ taxonomies = [
 ]
 
 [markdown]
-permalinks_without_slash = true
+#permalinks_without_slash = true
 highlight_code = true
 
 [extra]
